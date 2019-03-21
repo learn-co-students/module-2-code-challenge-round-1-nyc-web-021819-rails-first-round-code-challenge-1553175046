@@ -2,6 +2,7 @@ class HeroinesController < ApplicationController
   before_action :set_heroine, only: :show
 
   def index
+    # Added extra vars for testing filtering solutions
     @power = Power.new
     @powers = Power.all
     @heroine = Heroine.new
@@ -9,9 +10,9 @@ class HeroinesController < ApplicationController
   end
 
   def filtered
+    # Added extra vars for testing filtering solutions
     # need to get param of heroine[:power_id, 
     # only show based on that.. put filtering in model..]
-    byebug
     @power = Power.find(params[:heroine][:power_id])
     @powers = Power.all
     @heroines = Heroine.all
