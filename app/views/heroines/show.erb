@@ -1,0 +1,19 @@
+<% if flash[:notice] %>
+   <div class="notice"><%= flash[:notice] %></div>
+ <% end %>
+
+
+
+<h1><label>Name:</label><%=@haroine.name%></h1>
+<h1><label>Super Name:</label><%=@haroine.super_name%></h1>
+
+
+
+<%= button_to "delete", @movie, {method: :delete, data: { confirm: "Are you sure?"}} %>
+</p>
+
+<p><%= link_to '<button type = "button">Create New </button>'.html_safe, new_heroin_path %>
+</p>
+
+<p><%= link_to '<button type = "button">Go back to the list </button>'.html_safe, heroines_path %>
+</p>
