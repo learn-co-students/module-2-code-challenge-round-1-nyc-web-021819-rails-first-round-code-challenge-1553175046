@@ -1,0 +1,6 @@
+
+
+  <%= form_tag @power do |f| %>
+  <%= f.label :power %>
+  <%= f.collection_select(:power_id, @powers, :id, :name) %>
+  <% end %>

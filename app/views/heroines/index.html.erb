@@ -3,8 +3,18 @@
 <ul>
   <% @heroines.each do |heroine| %>
     <li>
-      <%= heroine.super_name %>
+      <%= link_to heroine.super_name, heroine %>
     </li>
     <br>
   <% end %>
 </ul>
+
+<!-- bonus
+was tring to create a collection_select form for user to select power
+form would then display heroines names for selected power
+
+added this feature to my powers/show page, but wasn't able to add to heroines/index yet
+
+<%# render "/powers/power_search_form" %>
+
+-->
