@@ -1,0 +1,10 @@
+<h2>Heroine Details</h2>
+
+<label>Name:</label>
+<%= @heroine.name %><br>
+<label>Super Name:</label>
+<%= @heroine.super_name %><br>
+<label>Power:</label>
+<%= link_to @heroine.power.name, @heroine.power %><br>
+
+<%= button_to "See All Heroines", heroines_path, method: :get%>
