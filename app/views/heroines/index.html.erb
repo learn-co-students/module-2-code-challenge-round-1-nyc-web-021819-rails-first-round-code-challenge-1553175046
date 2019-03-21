@@ -1,9 +1,32 @@
-<h2>All Heroines</h2>
+<!--
+8. Add a filter to the index view of the heroines. 
+This will allow the visitor to search for an existing 
+power and display all the heroines with that power on 
+the same view page.
+
+![Searching on the heroines route and finding heroines 
+by a power](search_by_power.gif)
+-->
+
+<%# to do this I could... show the heroines by a filter default
+to all. When collection select loads, do get index with that 
+param %>
+
+<h2>Heroines:</h2>
+
+<label>Filter by Power (Could not finish): </label>
+<%= form_for @heroine do |f| %>
+<%= f.collection_select :power_id, @powers, :id, :name%> <br>
+<%= f.submit value="Filter" %>
+<%# Couldn't finish filter action/routing %>
+<% end %>
+
+<%= link_to "Create a Heroine!", new_heroine_path %>
 
 <ul>
   <% @heroines.each do |heroine| %>
     <li>
-      <%= heroine.super_name %>
+      <%= link_to heroine.super_name, heroine %>
     </li>
     <br>
   <% end %>
