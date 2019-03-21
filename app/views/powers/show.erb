@@ -1,0 +1,13 @@
+<h2>Power Details</h2>
+
+<label>Name:</label>
+<%= @power.name %><br>
+<label>Description:</label>
+<%= @power.description %><br>
+<label>List of Heroines:</label>
+<% @power.heroines.each do |heroine| %>
+    <%= link_to heroine.name, heroine %><br>
+<% end %>
+
+<%= button_to "See All Heroines", heroines_path, method: :get%>
+<%= button_to "See All Powers", powers_path, method: :get%>
