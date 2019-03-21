@@ -1,0 +1,24 @@
+<h1>A new heroine emerges!</h1>
+
+<% if flash[:oops] %>
+  <ul>
+    <% flash[:oops].each do |msg| %>
+      <li><%=msg %></li>
+      <% end
+       %>
+  </ul>
+<% end %>
+
+<%= form_for @heroine  do |f| %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %><br>
+
+  <%= f.label :super_name %>
+  <%= f.text_field :super_name %><br>
+
+  <%= f.label :power_id %>
+  <%= f.collection_select :power_id, @powers, :id, :name, :prompt => true %><br>
+<%= f.submit %>
+
+<% end %>
