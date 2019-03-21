@@ -1,0 +1,4 @@
+<h1>Heroine Info</h1>
+<h2><%= label_tag "Name: " %><%= @heroine.name %></h2>
+<h2><%= label_tag "Super Name: " %>
+<%=link_to @heroine.super_name, power_path(@heroine.power_id) %></h2>

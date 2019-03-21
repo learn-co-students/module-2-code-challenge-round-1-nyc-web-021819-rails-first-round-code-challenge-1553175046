@@ -1,0 +1,16 @@
+<h1>Create Your Heroine</h1>
+
+<% if flash[:error] %>
+  <% flash[:error].each do |err| %>
+  <li><%= err %></li>
+  <% end %>
+<% end %>
+
+<%= form_for @heroine do |f| %>
+  <h3><%= f.label :name %>
+  <%= f.text_field :name %></h3>
+  <h3><%= f.label:super_name %>
+  <%= f.text_field :super_name %></h3>
+  <h3><%= f.collection_select(:power_id, @powers, :id, :name, prompt: true) %></h3>
+  <h3><%= f.submit %><h3>
+<% end %>
