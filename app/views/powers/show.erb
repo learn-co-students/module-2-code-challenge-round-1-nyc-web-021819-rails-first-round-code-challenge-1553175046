@@ -1,0 +1,25 @@
+<h2><%= @power.name %> </h2>
+
+<h4><%= button_to 'Edit', edit_power_path(@power), {method: :get} %> <%= button_to 'Delete', @power, method: :delete, data: { confirm: 'Confirm delete?' } %> </h4>
+
+<h4>Description:</h4>
+<p><%= @power.description %></p>
+
+<h4>Heroine Details:</h4>
+<% if @power.heroines.length > 0  %>
+ <table style="width:50%">
+<tr>
+  <th>Name</th>
+  <th>Super Name</th>
+</tr>
+ <% @power.heroines.each do |heroine| %>
+ <tbody>
+ <tr>
+ <td><%= link_to heroine.name, heroine_path(heroine) %></td>
+ <td><%= heroine.super_name %></td>
+    <% end %>
+  <% end %>
+    </tr>
+  </tbody>
+ </table>
+ <p><%= link_to "Back to powers", powers_path %></p>
