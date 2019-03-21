@@ -1,0 +1,10 @@
+
+
+<h3>new heroine's name: <%= @heroine.name %></h3>
+
+<ul>
+    <li>heroine's super name: <%= @heroine.super_name %></li>
+  <li>heroine's super power: <%= link_to @heroine.power.name, power_path(@heroine.power) %></li>
+  <li>heroine's super power description: <%= @heroine.power.description %></li>
+
+</ul>
