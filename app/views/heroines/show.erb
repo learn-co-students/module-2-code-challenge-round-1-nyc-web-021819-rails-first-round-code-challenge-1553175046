@@ -1,0 +1,7 @@
+<h1><%= @heroine.super_name %>'s Page</h1>
+
+<ul>
+  <li>Name: <%= @heroine.name %></li>
+  <li>Super Name: <%= @heroine.super_name %></li>
+  <li>Power: <%= link_to @heroine.power.name, "/powers/#{@power_id}"%></li>
+</ul>
