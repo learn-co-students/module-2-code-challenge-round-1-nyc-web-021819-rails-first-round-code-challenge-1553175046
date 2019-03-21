@@ -1,0 +1,6 @@
+<h1><%= @heroine.super_name %></h1>
+
+<ul>
+  <li><%= @heroine.name %></li>
+  <li><%= link_to @heroine.power.name, "/powers/#{@heroine.power.id}" %></li>
+</ul>
