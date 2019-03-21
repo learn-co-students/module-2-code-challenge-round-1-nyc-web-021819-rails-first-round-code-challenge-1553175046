@@ -5,6 +5,7 @@ class CreatePowers < ActiveRecord::Migration[5.0]
       t.string :description
 
       t.timestamps
+      
     end
   end
 end
