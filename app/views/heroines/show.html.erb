@@ -1,0 +1,4 @@
+<h1><%= @heroine.super_name%></h1>
+<h3>SECRET IDENTITY: <%= @heroine.name%></h3>
+
+<%= @heroine.super_name %> can use the following power: <%= link_to @heroine.power.name, power_path(@heroine.power)%>! 
