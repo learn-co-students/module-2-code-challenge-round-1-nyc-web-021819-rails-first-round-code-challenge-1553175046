@@ -1,0 +1,12 @@
+<h2>Heroines with <%= @power.name %></h2>
+
+<ul>
+  <% @heroines.each do |heroine| %>
+    <li>
+        <% if heroine.power_id == @power.id %>
+            <%= link_to heroine.super_name, heroine %>
+        <% end %>
+    </li>
+    <br>
+  <% end %>
+</ul>
