@@ -22,7 +22,7 @@ heroines = [
   {name:"Kitty Pryde", super_name:"Shadowcat" },
   {name:"Elektra Natchios", super_name:"Elektra" }
 ]
-
+# byebug
 # ---------------
 # POWERFUL HEROINES:
 # Once you set up your tables and associations the way you want them, you can
